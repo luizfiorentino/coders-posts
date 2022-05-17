@@ -14,7 +14,9 @@ const feedSlice = createSlice({
     },
     postsFetched: (state, action) => {
       console.log("postsFetched action", action);
-      state.posts = [...action.payload];
+      // get 5 posts at time, and keep the posts
+      // currently in the state, and add the new incoming ones at the end of the array
+      state.posts = [...state.posts, ...action.payload];
       state.loading = false;
     },
   },

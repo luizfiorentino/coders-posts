@@ -24,6 +24,7 @@ export default function HomePage() {
               </li>
             ))}
       </ul>
+      <button onClick={() => dispatch(fetchPosts)}>Load more</button>
     </div>
   );
 }
